@@ -1,0 +1,11 @@
+<button (click)="activate()">Activate</button>
+<div
+#boardWrap
+(mousemove)="isActivated && onMouseMove($event)"
+(click)="isActivated && onClick($event)"
+class="board-wrap"
+>
+    <canvas #background class="background"></canvas>
+    <canvas #noteLayer class="note-layer"></canvas>
+    <canvas #stringLayer class="string-layer"></canvas>
+</div>
